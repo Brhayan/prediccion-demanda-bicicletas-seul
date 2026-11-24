@@ -140,6 +140,10 @@ el tablero clona este repositorio y necesita encontrarlos ya entrenados.
 
 ## Tablero interactivo
 
+La aplicación está desplegada en Streamlit Community Cloud y se puede usar sin instalar nada:
+<https://prediccion-demanda-bicicletas-seul-yvr7y3nzhguhemopxvwdby.streamlit.app/>. Para
+ejecutarla en local:
+
 ```bash
 streamlit run dashboard/app.py
 ```
