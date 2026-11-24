@@ -1,0 +1,20 @@
+# Identidad visual del tablero. Los mismos colores de las figuras de los
+# cuadernos, para que la aplicación y el informe se lean como un solo trabajo.
+#
+# Este archivo va en la raíz del repositorio aunque la aplicación viva en
+# dashboard/: Streamlit Community Cloud busca las dependencias junto al archivo
+# de entrada, pero la configuración solo la lee desde la raíz.
+
+[theme]
+primaryColor = "#2a78d6"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f0efec"
+textColor = "#0b0b0b"
+font = "sans serif"
+
+[server]
+# El tablero no recibe archivos de nadie.
+maxUploadSize = 1
+
+[browser]
+gatherUsageStats = false

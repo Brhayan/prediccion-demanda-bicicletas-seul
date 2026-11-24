@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Los modelos de models/ SI se versionan, aunque sean binarios: el servicio que
+# aloja el tablero de la Fase 4 clona este repositorio y necesita encontrarlos.
+# Son 2 MB y el cuaderno 03 los regenera. Quedan fuera los pesos de PyTorch,
+# porque el tablero predice con XGBoost y asi el despliegue no instala torch.
+models/*.pt
+
+# Datos intermedios (se regeneran desde data/raw)
+data/processed/*
+!data/processed/.gitkeep
+
+# Sistema operativo
+Thumbs.db
+desktop.ini
+.DS_Store
+

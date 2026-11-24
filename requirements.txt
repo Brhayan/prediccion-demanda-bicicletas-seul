@@ -1,0 +1,42 @@
+# Versiones exactas del entorno conda `trabajos_maestria` (Python 3.11.9)
+# Reproducir con:  conda create -n ciencia_datos python=3.11.9 && pip install -r requirements.txt
+
+# --- Datos y cálculo ---
+pandas==3.0.5
+numpy==2.4.6
+scipy==1.17.1
+
+# --- Visualización ---
+# Todas las figuras del proyecto se construyen con Plotly: el entregable se
+# exporta a HTML y ese formato conserva la interactividad. matplotlib queda
+# porque `shap` lo usa internamente para sus gráficos.
+plotly==7.0.0
+matplotlib==3.11.2
+
+# --- Modelado ---
+scikit-learn==1.9.0
+xgboost==3.2.0
+
+# Rueda de CPU, no la de CUDA. El MLP se entrena sobre 5 925 filas, donde la
+# GPU no aporta, y el tablero de la Fase 4 se despliega en un servicio sin
+# tarjeta gráfica: conviene entrenar en lo mismo donde va a correr. Instalar con
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch==2.15.0+cpu
+
+# --- Interpretabilidad ---
+# numba y llvmlite entran como dependencias de shap, pero se fijan porque son
+# las que suelen romper la compatibilidad con numpy.
+shap==0.51.0
+numba==0.68.1
+llvmlite==0.50.0
+
+# --- Dashboard (Fase 4) ---
+# El tablero desplegado no instala este archivo sino dashboard/requirements.txt,
+# que deja fuera torch y shap porque no entrena nada. Streamlit queda aquí para
+# poder levantarlo en local desde el mismo entorno de los cuadernos.
+streamlit==1.67.0
+
+# --- Exportación del informe a HTML ---
+# Viven en el entorno `base`, no en `trabajos_maestria`.
+nbconvert
+jupyterlab

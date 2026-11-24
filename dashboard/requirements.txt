@@ -1,0 +1,21 @@
+# Dependencias del tablero desplegado. NO es el requirements.txt del proyecto:
+# el de la raíz reproduce los cuadernos y este levanta la aplicación web.
+#
+# Hay dos por dos razones. La primera es que el tablero no entrena: carga los
+# modelos de models/ y no necesita torch ni shap, que entre ambos pasan de
+# 300 MB y alargarían cada despliegue sin aportar nada. La segunda es que el
+# torch del archivo raíz está fijado a la rueda de CPU, `2.15.0+cpu`, que no
+# existe en PyPI sino en el índice de PyTorch: un `pip install` en el servicio
+# de alojamiento fallaría ahí.
+#
+# Las versiones son las mismas con las que se serializaron los modelos. Un
+# pickle de scikit-learn leído por otra versión puede romperse o, peor,
+# cargarse y predecir distinto; models/metadatos.json guarda las que se usaron.
+
+streamlit==1.67.0
+pandas==3.0.5
+numpy==2.4.6
+scikit-learn==1.9.0
+xgboost==3.2.0
+joblib==1.6.0
+plotly==7.0.0

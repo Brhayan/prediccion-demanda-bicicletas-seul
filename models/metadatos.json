@@ -1,0 +1,35 @@
+{
+  "numericas": [
+    "Temperature(°C)",
+    "Humidity(%)",
+    "Wind speed (m/s)",
+    "Visibility (10m)",
+    "Solar Radiation (MJ/m2)",
+    "depresion_punto_rocio",
+    "hora_sin",
+    "hora_cos"
+  ],
+  "categoricas": [
+    "Seasons",
+    "Holiday",
+    "es_fin_de_semana",
+    "llueve",
+    "nieva"
+  ],
+  "clases_demanda": [
+    "Baja",
+    "Media",
+    "Alta"
+  ],
+  "etiquetas_grupo": {
+    "0": "Frío y seco",
+    "1": "Templado y soleado",
+    "2": "Húmedo y nublado"
+  },
+  "versiones": {
+    "scikit-learn": "1.9.0",
+    "xgboost": "3.2.0",
+    "pandas": "3.0.5",
+    "numpy": "2.4.6"
+  }
+}
